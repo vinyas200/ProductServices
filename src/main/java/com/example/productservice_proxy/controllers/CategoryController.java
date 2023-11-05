@@ -1,6 +1,6 @@
 package com.example.productservice_proxy.controllers;
 
-import com.jayway.jsonpath.internal.Path;
+//import com.jayway.jsonpath.internal.Path;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +17,10 @@ public class CategoryController {
     }
 
     @GetMapping("/{categoryId}")
-    public String getProductsInCategory(@PathVariable("categoryId") Long categoryId) {
+    public String getProductsInCategory(@PathVariable("categoryId") Long categoryId) throws Exception {
+        if(categoryId < 1) {
+            throw new Exception("Invalid category id");
+        }
         return "Get products in category";
     }
 }
