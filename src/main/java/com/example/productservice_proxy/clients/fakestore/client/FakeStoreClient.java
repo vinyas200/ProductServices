@@ -1,6 +1,6 @@
 package com.example.productservice_proxy.clients.fakestore.client;
 
-import com.example.productservice_proxy.clients.fakestore.client.dto.FakeStoreProductDto;
+import com.example.productservice_proxy.clients.fakestore.dto.FakeStoreProductDto;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -26,5 +26,10 @@ public class FakeStoreClient {
         );
 
         return Arrays.asList(l.getBody());
+    }
+
+    public FakeStoreProductDto getSingleProduct(Long productId) {
+        // TODO
+        return null;
     }
 }

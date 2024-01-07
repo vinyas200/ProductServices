@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+//@Service
 public class SelfProductService implements IProductService {
 
     ProductRepo productRepo;
@@ -36,12 +36,7 @@ public class SelfProductService implements IProductService {
     }
 
     @Override
-    public Product updateProductPut(Long productId, Product product) {
-        return null;
-    }
-
-    @Override
-    public Product deleteProduct(Long productId) {
+    public String deleteProduct(Long productId) {
         return null;
     }
 }
